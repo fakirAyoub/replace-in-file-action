@@ -9,10 +9,14 @@ inputs:
     description: 'String to replace in the file'
     required: true
     default: ''
-
+  replacement-string:
+    description: 'String to replace with'
+    required: true
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.input-file }}
     - ${{ inputs.string-in-file }}
+    - ${{ inputs.replacement-string }}
