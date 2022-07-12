@@ -19,4 +19,4 @@ runs:
   args:
     - ${{ inputs.input-file }}
     - ${{ inputs.string-in-file }}
-    - ${{ replacement-string }}
+    - ${{ inputs.replacement-string }}
