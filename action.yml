@@ -1,0 +1,22 @@
+name: 'Sed Action'
+description: 'Replace a String in a File using Github Actions'
+inputs:
+  input-file:
+    description: 'Input File'
+    required: true
+    default: ''
+  string-in-file:
+    description: 'String to replace in the file'
+    required: true
+    default: ''
+  replacement-string:
+    description: 'String replacement'
+    required: true
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input-file }}
+    - ${{ inputs.string-in-file }}
+    - ${{ replacement-string }}
